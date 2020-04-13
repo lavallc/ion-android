@@ -1,0 +1,155 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
+    <!-- pattern selector (radiogroup) -->
+    <RadioGroup
+        android:id="@+id/typeRadioGroup"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="6dp"
+	    android:layout_marginBottom="6dp"
+	    android:orientation="horizontal">
+		    <RadioButton android:id="@+id/haloRadio"
+		        android:layout_marginLeft="18dp"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:text="Halo"/>
+		    <RadioButton android:id="@+id/spinRadio"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:text="Spin"/>
+		    <RadioButton android:id="@+id/glowRadio"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:text="Glow"/>
+	</RadioGroup>
+    
+    <!-- speed (slider) -->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Speed"
+            android:textSize="14sp"
+            android:gravity="center_horizontal" />
+    
+    <SeekBar
+        android:id="@+id/notif_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </SeekBar>
+    
+    <!-- hue (HSVColorWheel) -->
+    <com.buzzingandroid.ui.HSVColorWheel
+        android:id="@+id/notif_color_wheel"
+    	android:layout_width="wrap_content"
+    	android:layout_height="180dp" />
+    
+    <!-- toggle (sticky) -->
+    <RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_marginTop="8dp"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginRight="20dp"
+	    android:layout_height="wrap_content">
+	    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="8dp"
+            android:text="Sticky"
+            android:textSize="18sp"
+            android:gravity="center_horizontal" />
+        
+	    <Switch 
+		    android:id="@+id/stickySwitch"
+		    android:layout_width="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:layout_centerVertical="true"
+		    android:layout_height="wrap_content" />
+    </RelativeLayout>
+    
+    
+    <!-- duration (slider) -->
+    <RelativeLayout
+        android:id="@+id/durationLayout"
+	    android:layout_width="match_parent"
+	    android:layout_marginTop="2dp"
+		android:layout_marginBottom="8dp"
+	    android:layout_height="wrap_content">
+		    <SeekBar
+		        android:id="@+id/notif_duration"
+		        android:layout_width="match_parent"
+		        android:layout_marginRight="44dp"
+		        android:layout_centerVertical="true"
+		        android:layout_height="wrap_content" >
+		    </SeekBar>
+		    
+		    <TextView
+		        android:id="@+id/notif_duration_text"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerVertical="true"
+	            android:layout_marginRight="14dp"
+	            android:layout_marginBottom="4dp"
+	            android:layout_alignParentRight="true"
+	            android:text="10s"
+	            android:textSize="16sp"
+	            android:gravity="right" />
+	</RelativeLayout>
+    
+	<View
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dip"
+	    android:layout_marginTop="8dp"
+	    android:background="?android:attr/dividerHorizontal" />
+	
+	<LinearLayout 
+	    style="?android:attr/buttonBarStyle"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:paddingTop="0dip"
+	    android:paddingLeft="2dip"
+	    android:paddingRight="2dip"
+	    android:measureWithLargestChild="true">
+	    
+	    <!-- cancel btn -->
+	    <Button
+	        android:id="@+id/notif_cancel_btn"
+	    	style="?android:attr/buttonBarButtonStyle"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	    	android:text="Cancel"
+	    />
+    
+	    <!-- preview btn -->
+	    <Button
+	        android:id="@+id/notif_preview_btn"
+	    	style="?android:attr/buttonBarButtonStyle"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	    	android:text="Preview"
+	    />
+	    
+	    <!-- save btn -->
+	    <Button
+	        android:id="@+id/notif_save_btn"
+	    	style="?android:attr/buttonBarButtonStyle"
+	        android:layout_width="0dip"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	    	android:text="Save"
+	    />
+
+	</LinearLayout>
+    
+</LinearLayout>

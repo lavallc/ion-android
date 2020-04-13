@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ION</string>
+    <string name="bluetooth_warning">Please Enable Bluetooth</string>
+    
+    <string-array name="left_menu_drawer_options_array">
+        <item>Home</item>
+        <item>Mood Browser</item>
+        <item>Notifications</item>
+        <item>Settings</item>
+        <item>Updates</item>
+        <item>About</item>
+    </string-array>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <!-- Menu -->
+    <string name="fragment_home_title_header">Home</string>
+    <string name="fragment_patterns_title_header">Mood Browser</string>
+    <string name="fragment_notifications_title_header">Notifications</string>
+    <string name="fragment_settings_title_header">Settings</string>
+    <string name="fragment_recovery_title_header">Updates</string>
+    <string name="fragment_about_title_header">About</string>
+    
+    <!-- Home -->
+	<string name="fragment_home_welcome_text">Home</string>
+	<string name="fragment_home_discover_devices">Discover Devices</string>
+	
+	<!-- Time Picker -->
+    <string name="time_set">Start Timer</string>
+    <string name="cancel">Cancel</string>
+    <string name="time">Time : </string>
+
+</resources>

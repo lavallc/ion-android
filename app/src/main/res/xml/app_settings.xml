@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory
+        android:key="app_settings"
+        android:title="App Settings" >
+        
+        <CheckBoxPreference
+            android:key="notification_bar"
+            android:title="Notification Bar"
+            android:summary="Allow control of connected lamps from the notification bar"
+            android:defaultValue="true" />
+        
+        <CheckBoxPreference
+            android:key="background_discovery"
+            android:title="Autoconnect"
+            android:summary="Automatically search and connect to remembered lamps in the background"
+            android:defaultValue="false" />
+        
+        <io.lava.ion.fragments.settings.IconRightPreference
+            android:key="current_weather_location"
+            android:persistent="false"
+            android:title="Weather Location"
+            android:summary="Weather data unavailable"
+          	android:icon="@drawable/geo_icon"
+          	android:enabled="false"
+        />
+        
+    </PreferenceCategory>
+
+</PreferenceScreen>

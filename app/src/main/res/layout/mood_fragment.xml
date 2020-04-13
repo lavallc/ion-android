@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <io.lava.ion.utility.SlidingImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/patternImage" />
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#44000000" />
+    
+    <io.lava.ion.moods.MoodScroller
+        android:id="@+id/parentScroller"
+  		android:layout_width="match_parent"
+  		android:layout_height="match_parent">
+
+        <RelativeLayout
+    		android:layout_width="wrap_content"
+    		android:layout_height="match_parent">
+    		
+            <RelativeLayout
+                android:id="@+id/patternInfoLayout"
+    			android:layout_width="match_parent"
+    			android:layout_height="match_parent">
+    		
+	            <LinearLayout
+	    			android:orientation="vertical"
+	    			android:layout_alignParentLeft="true"
+	    			android:layout_alignParentTop="true"
+	    			android:layout_marginTop="20dp"
+	    			android:layout_width="wrap_content"
+	    			android:layout_height="wrap_content">
+	    			
+	                <TextView
+				        android:id="@+id/patternName"
+				        android:textColor="@drawable/white"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="6dp"
+				        android:layout_marginRight="6dp"
+				        style="@style/MoodTextShadow"
+				        android:textSize="46sp" />
+	    
+	    			<TextView
+				        android:id="@+id/patternDesc"
+				        android:textColor="@drawable/white"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_marginLeft="6dp"
+				        android:layout_marginRight="40dp"
+				        style="@style/MoodTextShadow"
+				        android:textSize="20sp" />
+	    		
+	    		</LinearLayout>
+	    		
+	            <ImageView
+	                android:id="@+id/favoriteBtn"
+			        android:layout_width="50dp"
+			        android:layout_height="50dp"
+			        android:layout_marginBottom="4dp"
+			        android:layout_marginRight="4dp"
+			        android:alpha="0.7"
+			        android:visibility="gone"
+			        android:layout_alignParentRight="true"
+	    			android:layout_alignParentBottom="true"
+			        android:src="@drawable/favorited_off" />
+	    		
+	    	</RelativeLayout>
+    		
+            <!-- this width is set during runtime, as it is off screen -->
+            <ScrollView
+                android:id="@+id/patternConfigScroller"
+                android:overScrollMode="never"
+    			android:layout_toRightOf="@id/patternInfoLayout"
+    			android:layout_width="match_parent"
+    			android:layout_height="match_parent">
+	            
+                <!-- a scrollview can have only one child -->
+                <LinearLayout
+	    			android:orientation="vertical"
+	    			android:layout_width="match_parent"
+	    			android:layout_height="wrap_content">
+    			
+	                <!-- all of the config options are added to this layout -->
+	    			<LinearLayout
+		                android:id="@+id/patternConfigLayout"
+		    			android:orientation="vertical"
+		    			android:layout_marginTop="10dp"
+		    			android:paddingBottom="20dp"
+		    			android:layout_width="match_parent"
+		    			android:layout_height="wrap_content">
+	    			
+	    			</LinearLayout>
+	    			
+	    			<LinearLayout
+		    			android:orientation="horizontal"
+		    			android:layout_marginTop="10dp"
+		    			android:layout_marginBottom="20dp"
+		    			android:gravity="center"
+		    			android:layout_width="match_parent"
+		    			android:layout_height="wrap_content">
+		    			
+	    			    <Button 
+						    android:id="@+id/restoreBtn"
+						    android:layout_width="250dp"
+						    android:layout_height="wrap_content"
+						    android:textColor="#FFFFFF"
+						    android:text="Restore Defaults" />
+	    			
+	    			</LinearLayout>
+	    		
+	    		</LinearLayout>
+    		
+    		</ScrollView>
+    	
+       	</RelativeLayout>
+       	
+  	</io.lava.ion.moods.MoodScroller>
+
+</RelativeLayout>

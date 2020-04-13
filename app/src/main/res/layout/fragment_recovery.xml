@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:orientation="vertical" >
+    
+    <TextView
+        android:id="@+id/update_header"
+        android:layout_width="match_parent"
+        android:layout_marginTop="12dp"
+        android:layout_height="wrap_content"
+        android:text="ION Firmware Updates"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:gravity="center" />
+    
+    <TextView
+        android:id="@+id/update_text"
+        android:layout_width="match_parent"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"
+        android:text="Connect to a lamp to check for updates."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#000000"
+        android:gravity="center" />
+    
+    <Button
+        android:id="@+id/updateBtn"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:enabled="false"
+    	android:gravity="center"
+    	android:paddingLeft="6dp"
+    	android:layout_gravity="center_horizontal"
+    	android:drawableLeft="@drawable/update_icon"
+    	android:text="Check for Updates"
+    	/>
+    
+    <LinearLayout
+        android:id="@+id/recovery_section"
+    	android:layout_width="match_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical" >
+    
+    <View
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dip"
+	    android:layout_marginTop="22dp"
+	    android:layout_marginLeft="14dp"
+	    android:layout_marginRight="14dp"
+	    android:background="#999999" />
+    
+    <TextView
+        android:id="@+id/recovery_header"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        android:text="Recovery"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#000000"
+        android:gravity="center" />
+    
+    <TextView
+        android:id="@+id/recovery_text"
+        android:layout_width="match_parent"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="16dp"
+        android:layout_height="wrap_content"
+        android:text="Recovery can be used in the rare event that your ION's firmware has become corrupt (if your ION flashes red when plugged in). You can also enter recovery mode by tapping ION's top 3 times the moment you plug it in."
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#000000"
+        android:gravity="center" />
+    
+    <Button
+        android:id="@+id/recoverBtn"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:enabled="false"
+    	android:gravity="center"
+    	android:paddingLeft="6dp"
+    	android:layout_gravity="center_horizontal"
+    	android:drawableLeft="@drawable/recovery_icon"
+    	android:text="Recover ION"
+    	/>
+    
+    </LinearLayout>
+
+</LinearLayout>

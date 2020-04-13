@@ -1,0 +1,740 @@
+{
+	"moods": [
+		{
+			"name": "Off",
+			"id": 1,
+			"image": "off.jpg",
+			"desc": "Consumed by darkness.",
+			"configs": [
+			]
+		},
+		{
+			"name": "Light",
+			"id": 2,
+			"image": "light.jpg",
+			"desc": "Emulates different light sources.",
+			"configs": [
+				{
+					"name": "Candle",
+					"id": 1,
+					"min": 1,
+					"max": 1,
+					"widget": "button",
+					"default": 1,
+					"label": ""
+				},
+				{
+					"name": "Incandescent",
+					"id": 1,
+					"min": 2,
+					"max": 2,
+					"widget": "button",
+					"default": 2,
+					"label": ""
+				},
+				{
+					"name": "Fluorescent",
+					"id": 1,
+					"min": 3,
+					"max": 3,
+					"widget": "button",
+					"default": 3,
+					"label": ""
+				},
+				{
+					"name": "Blue Sky",
+					"id": 1,
+					"min": 4,
+					"max": 4,
+					"widget": "button",
+					"default": 4,
+					"label": ""
+				},
+				{
+					"name": "Sunlight",
+					"id": 1,
+					"min": 5,
+					"max": 5,
+					"widget": "button",
+					"default": 5,
+					"label": ""
+				},
+				{
+					"name": "Brightness",
+					"id": 2,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 190,
+					"label": ""
+				},
+				{
+					"name": "Color",
+					"id": 3,
+					"min": 0,
+					"max": 360,
+					"widget": "color",
+					"default": 0,
+					"label": ""
+				},
+				{
+					"name": "Saturation",
+					"id": 4,
+					"min": 0,
+					"max": 255,
+					"widget": "none",
+					"default": 0,
+					"label": ""
+				},
+				{
+					"name": "Low Glow",
+					"id": 5,
+					"min": 0,
+					"max": 1,
+					"widget": "toggle",
+					"default": 0,
+					"label": ""
+				}
+			]
+		},
+		{
+			"name": "Flame",
+			"id": 4,
+			"image": "flame.jpg",
+			"desc": "Candle, you've met your match.",
+			"configs": [
+				{
+					"name": "Color",
+					"id": 1,
+					"min": 0,
+					"max": 360,
+					"widget": "color",
+					"default": 0,
+					"label": ""
+				},
+				{
+					"name": "Saturation",
+					"id": 2,
+					"min": 0,
+					"max": 255,
+					"widget": "none",
+					"default": 255,
+					"label": ""
+				},
+				{
+					"name": "Inferno",
+					"id": 3,
+					"min": 0,
+					"max": 1,
+					"widget": "toggle",
+					"default": 0,
+					"label": ""
+				},
+				{
+					"name": "Enable Sound",
+					"id": 4,
+					"min": 0,
+					"max": 1,
+					"widget": "toggle",
+					"default": 1,
+					"label": ""
+				}
+			]
+		},
+		{
+			"name": "Digital Rain",
+			"id": 3,
+			"image": "digitalrain.jpg",
+			"desc": "The ION has you.",
+			"configs": [
+				{
+					"name": "Color",
+					"id": 1,
+					"min": 0,
+					"max": 360,
+					"widget": "color",
+					"default": 120,
+					"label": ""
+				},
+				{
+					"name": "Saturation",
+					"id": 2,
+					"min": 0,
+					"max": 255,
+					"widget": "none",
+					"default": 255,
+					"label": ""
+				},
+				{
+					"name": "Speed",
+					"id": 3,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 153,
+					"label": ""
+				}
+			]
+		},
+		{
+			"name": "Rainbow",
+			"id": 12,
+			"image": "rainbow.jpg",
+			"desc": "Taste the multicolor spectrum of light.",
+			"configs": [
+				{
+					"name": "Speed",
+					"id": 1,
+					"min": 0,
+					"max": 150,
+					"widget": "slider",
+					"default": 10,
+					"label": ""
+				},
+				{
+					"name": "Brightness",
+					"id": 2,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 153,
+					"label": ""
+				},
+				{
+					"name": "Reverse",
+					"id": 3,
+					"min": 0,
+					"max": 1,
+					"widget": "toggle",
+					"default": 0,
+					"label": ""
+				}
+			]
+		},
+		{
+			"name": "Weather",
+			"id": 8,
+			"image": "weather.jpg",
+			"desc": "ION emulates the real weather conditions outside using your phone's location. When clear out, you'll see the sun rise and fall based on the current time. The moon rises and falls during night. Other conditions showed are clouds at the top, haze filling most of ION, snow, rain, and lightning.",
+			"configs": [
+				{
+					"name": "Forecast",
+					"id": 1,
+					"min": 0,
+					"max": 1,
+					"widget": "toggle",
+					"default": 0,
+					"label": "Enable to see conditions 6 hours from now."
+				}
+			]
+		},
+		{
+			"name": "Thermometer",
+			"id": 15,
+			"image": "thermometer.jpg",
+			"desc": "Deep blue represents freezing and below, light blue represents chilly, green represents room temperature, orange represents hot, and red indicates sweltering.",
+			"configs": [
+				{
+					"name": "Forecast",
+					"id": 1,
+					"min": 0,
+					"max": 1,
+					"widget": "toggle",
+					"default": 0,
+					"label": "Enable to see conditions 6 hours from now."
+				}
+			]
+		},
+		{
+			"name": "Hourglass",
+			"id": 16,
+			"image": "hourglass.jpg",
+			"desc": "Your own hourglass, minuteglass, or secondglass.",
+			"configs": [
+				{
+					"name": "Time",
+					"id": 1,
+					"min": 0,
+					"max": 65535,
+					"widget": "time",
+					"default": 60,
+					"label": ""
+				},
+				{
+					"name": "Color",
+					"id": 2,
+					"min": 0,
+					"max": 360,
+					"widget": "color",
+					"default": 44,
+					"label": ""
+				},
+				{
+					"name": "Saturation",
+					"id": 3,
+					"min": 0,
+					"max": 255,
+					"widget": "none",
+					"default": 255,
+					"label": ""
+				}
+			]
+		},
+		{
+			"name": "Lava",
+			"id": 11,
+			"image": "lava.jpg",
+			"desc": "Globs. Globs everywhere.",
+			"configs": [
+				{
+					"name": "Speed",
+					"id": 1,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 10,
+					"label": ""
+				},
+				{
+					"name": "Color",
+					"id": 2,
+					"min": 0,
+					"max": 360,
+					"widget": "color",
+					"default": 0,
+					"label": ""
+				},
+				{
+					"name": "Saturation",
+					"id": 3,
+					"min": 0,
+					"max": 255,
+					"widget": "none",
+					"default": 255,
+					"label": ""
+				}
+			]
+		},
+		{
+			"name": "Lines",
+			"id": 13,
+			"image": "lines.jpg",
+			"desc": "We filled ION with lines for your viewing pleasure.",
+			"configs": [
+				{
+					"name": "Color",
+					"id": 1,
+					"min": 0,
+					"max": 360,
+					"widget": "color",
+					"default": 240,
+					"label": ""
+				},
+				{
+					"name": "Saturation",
+					"id": 2,
+					"min": 0,
+					"max": 255,
+					"widget": "none",
+					"default": 255,
+					"label": ""
+				},
+				{
+					"name": "Speed",
+					"id": 3,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 50,
+					"label": ""
+				}
+			]
+		},
+		{
+			"name": "Plasma",
+			"id": 18,
+			"image": "plasma.jpg",
+			"desc": "Harvested fresh from the surface of the sun.",
+			"configs": [
+				{
+					"name": "Color",
+					"id": 1,
+					"min": 0,
+					"max": 360,
+					"widget": "color",
+					"default": 30,
+					"label": ""
+				},
+				{
+					"name": "Saturation",
+					"id": 2,
+					"min": 0,
+					"max": 255,
+					"widget": "none",
+					"default": 255,
+					"label": ""
+				},
+				{
+					"name": "Speed",
+					"id": 3,
+					"min": 0,
+					"max": 150,
+					"widget": "slider",
+					"default": 20,
+					"label": ""
+				},
+				{
+					"name": "Sound Enabled",
+					"id": 4,
+					"min": 0,
+					"max": 1,
+					"widget": "toggle",
+					"default": 0,
+					"label": ""
+				}
+			]
+		},
+		{
+			"name": "Sparkle",
+			"id": 14,
+			"image": "sparkle.jpg",
+			"desc": "Make a wish.",
+			"configs": [
+				{
+					"name": "Color",
+					"id": 1,
+					"min": 0,
+					"max": 360,
+					"widget": "color",
+					"default": 200,
+					"label": ""
+				},
+				{
+					"name": "Saturation",
+					"id": 2,
+					"min": 0,
+					"max": 255,
+					"widget": "none",
+					"default": 255,
+					"label": ""
+				},
+				{
+					"name": "Speed",
+					"id": 3,
+					"min": 0,
+					"max": 150,
+					"widget": "slider",
+					"default": 10,
+					"label": ""
+				},
+				{
+					"name": "Sparkle Brightness",
+					"id": 4,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 166,
+					"label": ""
+				}
+			]
+		},
+		{
+			"name": "Spiral",
+			"id": 6,
+			"image": "spiral.jpg",
+			"desc": "I may look like a candy cane, but don't lick me.",
+			"configs": [
+				{
+					"name": "Color",
+					"id": 1,
+					"min": 0,
+					"max": 360,
+					"widget": "color",
+					"default": 0,
+					"label": ""
+				},
+				{
+					"name": "Saturation",
+					"id": 2,
+					"min": 0,
+					"max": 255,
+					"widget": "none",
+					"default": 255,
+					"label": ""
+				},
+				{
+					"name": "Speed",
+					"id": 3,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 26,
+					"label": ""
+				},
+				{
+					"name": "Brightness",
+					"id": 4,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 190,
+					"label": ""
+				}
+			]
+		},
+		{
+			"name": "Fireworks",
+			"id": 17,
+			"image": "fireworks.jpg",
+			"desc": "Watch out for falling ash.",
+			"configs": [
+				{
+					"name": "Dominant Color",
+					"id": 1,
+					"min": 0,
+					"max": 360,
+					"widget": "color",
+					"default": 0,
+					"label": ""
+				},
+				{
+					"name": "Saturation",
+					"id": 2,
+					"min": 0,
+					"max": 255,
+					"widget": "none",
+					"default": 255,
+					"label": ""
+				},
+				{
+					"name": "Enable Color",
+					"id": 3,
+					"min": 0,
+					"max": 1,
+					"widget": "toggle",
+					"default": 0,
+					"label": ""
+				},
+				{
+					"name": "Speed",
+					"id": 4,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 60,
+					"label": ""
+				},
+				{
+					"name": "Frequency",
+					"id": 5,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 215,
+					"label": ""
+				},
+				{
+					"name": "Sound Enabled",
+					"id": 6,
+					"min": 0,
+					"max": 1,
+					"widget": "toggle",
+					"default": 0,
+					"label": ""
+				}
+			]
+		},
+		{
+			"name": "Strobe",
+			"id": 10,
+			"image": "strobe.jpg",
+			"desc": "This is fun! Ow, my head.",
+			"configs": [
+				{
+					"name": "Interval",
+					"id": 1,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 150,
+					"label": ""
+				},
+				{
+					"name": "Color",
+					"id": 2,
+					"min": 0,
+					"max": 360,
+					"widget": "color",
+					"default": 0,
+					"label": ""
+				},
+				{
+					"name": "Saturation",
+					"id": 3,
+					"min": 0,
+					"max": 255,
+					"widget": "none",
+					"default": 255,
+					"label": ""
+				},
+				{
+					"name": "Color Enabled",
+					"id": 4,
+					"min": 0,
+					"max": 1,
+					"widget": "toggle",
+					"default": 0,
+					"label": ""
+				}
+			]
+		},
+		{
+			"name": "Pulse",
+			"id": 23,
+			"image": "pulse.jpg",
+			"desc": "Your ION is now a pulse cannon.",
+			"configs": [
+				{
+					"name": "Speed",
+					"id": 1,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 255,
+					"label": ""
+				},
+				{
+					"name": "Sound Enabled",
+					"id": 2,
+					"min": 0,
+					"max": 1,
+					"widget": "toggle",
+					"default": 1,
+					"label": ""
+				}
+			]
+		},
+		{
+			"name": "Rave",
+			"id": 7,
+			"image": "rave.jpg",
+			"desc": "If I could break dance, I would.",
+			"configs": [
+				{
+					"name": "Speed",
+					"id": 1,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 156,
+					"label": ""
+				},
+				{
+					"name": "Dominant Color",
+					"id": 2,
+					"min": 0,
+					"max": 360,
+					"widget": "color",
+					"default": 0,
+					"label": ""
+				},
+				{
+					"name": "Dominant Saturation",
+					"id": 3,
+					"min": 0,
+					"max": 255,
+					"widget": "none",
+					"default": 255,
+					"label": ""
+				},
+				{
+					"name": "Bass Boost",
+					"id": 4,
+					"min": 0,
+					"max": 1,
+					"widget": "toggle",
+					"default": 1,
+					"label": "Increases sensitivity to low end. This is shared between Rave and Whirlpool."
+				}
+			]
+		},
+		{
+			"name": "Whirlpool",
+			"id": 21,
+			"image": "whirlpool.jpg",
+			"desc": "If sound could get caught in a whirlpool.",
+			"configs": [
+				{
+					"name": "Speed",
+					"id": 1,
+					"min": 0,
+					"max": 255,
+					"widget": "slider",
+					"default": 125,
+					"label": ""
+				},
+				{
+					"name": "Dominant Color",
+					"id": 2,
+					"min": 0,
+					"max": 360,
+					"widget": "color",
+					"default": 0,
+					"label": ""
+				},
+				{
+					"name": "Dominant Saturation",
+					"id": 3,
+					"min": 0,
+					"max": 255,
+					"widget": "none",
+					"default": 255,
+					"label": ""
+				},
+				{
+					"name": "Bass Boost",
+					"id": 4,
+					"min": 0,
+					"max": 1,
+					"widget": "toggle",
+					"default": 1,
+					"label": "Increases sensitivity to low end. This is shared between Whirlpool and Rave."
+				}
+			]
+		},
+		{
+			"name": "Volume",
+			"id": 24,
+			"image": "volume.jpg",
+			"desc": "Turn it up!",
+			"configs": [
+			]
+		}
+	],
+	"notifications": [
+		{
+			"name": "Halo",
+			"id": 5,
+			"image": "halo.jpg",
+			"desc": "A bouncing ring.",
+			"configs": [
+			]
+		},
+		{
+			"name": "Spin",
+			"id": 9,
+			"image": "spin.jpg",
+			"desc": "Also doubles as a lighthouse.",
+			"configs": [
+			]
+		},
+		{
+			"name": "Glow",
+			"id": 22,
+			"image": "glow.jpg",
+			"desc": "Just a friendly pulsating light.",
+			"configs": [
+			]
+		}
+	]
+}

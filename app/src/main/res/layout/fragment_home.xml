@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+    	android:id="@+id/noConnectionLayout"
+    	android:layout_width="match_parent"
+    	android:orientation="vertical"
+    	android:layout_height="match_parent" >
+    	
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:text="Tap the light bulb in the upper right to select an ION."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#88000000" />
+    
+        <ImageView
+        	android:id="@+id/ionOutline"
+        	android:layout_width="220dp"
+        	android:layout_centerInParent="true"
+        	android:layout_height="412dp"
+        	android:src="@drawable/ion_outline"
+        	android:alpha="0.15"
+     	/>
+        
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Tap the volcano in the upper left to access the main menu."
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#88000000" />
+        
+	</RelativeLayout>
+    
+    <LinearLayout
+    	android:id="@+id/lampControls"
+    	android:layout_width="match_parent"
+    	android:orientation="horizontal"
+    	android:layout_height="175dp" >
+    
+        <ImageView
+        	android:id="@+id/pwrImg"
+        	android:layout_width="0dp"
+        	android:layout_weight=".33"
+        	android:padding="10dp"
+        	android:layout_height="wrap_content"
+        	android:src="@drawable/pwr_btn_img"
+        	android:scaleType="fitCenter"
+     	/>
+        
+        <ImageView
+        	android:id="@+id/nextMoodImg"
+        	android:layout_marginTop="10dp"
+        	android:layout_width="0dp"
+        	android:layout_weight=".33"
+        	android:layout_height="wrap_content"
+        	android:src="@drawable/next_mood_btn_img"
+        	android:scaleType="fitCenter"
+     	/>
+        
+	</LinearLayout>
+	
+    <ImageView
+        android:id="@+id/rotationListShadow"
+        android:background="@drawable/top_shadow"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+    />
+	
+    <ListView
+        android:id="@+id/rotationList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:choiceMode="singleChoice"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" />
+
+</LinearLayout>

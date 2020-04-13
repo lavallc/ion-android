@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <io.lava.ion.widgets.VerticalViewPager
+	    xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:app="http://schemas.android.com/apk/res-auto"
+	    android:id="@+id/viewPager"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+    />
+    
+    <ImageView
+        android:id="@+id/upArrow"
+        android:visibility="gone"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:alpha="0.5"
+        android:layout_centerHorizontal="true"
+  		android:layout_alignParentTop="true"
+        android:src="@drawable/up_arrow" />
+    
+    <ImageView
+        android:id="@+id/rightArrow"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:alpha="0.5"
+        android:rotation="90"
+        android:layout_centerVertical="true"
+  		android:layout_alignParentRight="true"
+        android:src="@drawable/up_arrow" />
+    
+    <ImageView
+        android:id="@+id/downArrow"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:alpha="0.5"
+        android:rotation="180"
+        android:layout_centerHorizontal="true"
+  		android:layout_alignParentBottom="true"
+        android:src="@drawable/up_arrow" />
+    
+    <ImageView
+        android:id="@+id/leftArrow"
+        android:visibility="gone"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:alpha="0.5"
+        android:rotation="270"
+        android:layout_centerVertical="true"
+  		android:layout_alignParentLeft="true"
+        android:src="@drawable/up_arrow" />
+
+</RelativeLayout>

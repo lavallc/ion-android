@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.lava.ion"
+    android:versionCode="15"
+    android:versionName="1.0.14" >
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ADD_VOICEMAIL" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-feature android:name="android.hardware.location.network" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="io.lava.ion.IonMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:logo="@drawable/actionbar_outline"
+            android:screenOrientation="sensorPortrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="io.lava.ion.fragments.notifications.ConfigureNotificationDialog"
+			android:theme="@android:style/Theme.Holo.Light.Dialog"
+			android:launchMode="singleTask"
+            android:screenOrientation="sensorPortrait" >
+        </activity>
+        
+        <receiver android:name="io.lava.ion.receivers.OnBootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="io.lava.ion.notifications.SystemNotificationReceiver"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" >
+                </action>
+            </intent-filter>
+        </service>
+
+        <receiver android:name="io.lava.ion.notifications.SystemSMSReceiver" >
+            <intent-filter android:priority="999" >
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="io.lava.ion.notifications.SystemMMSReceiver" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.WAP_PUSH_RECEIVED" />
+
+                <data android:mimeType="application/vnd.wap.mms-message" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="io.lava.ion.notifications.SystemVoicemailReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.NEW_VOICEMAIL" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="io.lava.ion.notifications.SystemAlarmReceiver" >
+            <intent-filter>
+                <action android:name="com.android.deskclock.ALARM_ALERT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="io.lava.ion.notifications.SystemCallReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="io.lava.ion.NotificationFactory" >
+            <intent-filter>
+                <action android:name="io.lava.ion.NEXT_MOOD" />
+                <action android:name="io.lava.ion.ON_OFF" />
+                <action android:name="io.lava.ion.CLEAR_NOTIFICATION" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="io.lava.ion.receivers.IONDiscoveryReceiver" >
+            <intent-filter>
+                <action android:name="io.lava.ion.DISCOVER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="io.lava.ion.receivers.IONWeatherUpdateReceiver" >
+            <intent-filter>
+                <action android:name="io.lava.ion.WEATHER_UPDATE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="io.lava.ion.receivers.IONFirmwareUpdateReceiver" >
+            <intent-filter>
+                <action android:name="io.lava.ion.FIRMWARE_UPDATE" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="io.lava.ion.services.weather.WeatherService" android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name="io.lava.ion.services.weather.WeatherJobService" android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name="io.lava.ion.services.firmware.FirmwareUpdateChecker" />
+    </application>
+
+</manifest>

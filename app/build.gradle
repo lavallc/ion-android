@@ -1,0 +1,26 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "io.lava.ion"
+        minSdkVersion 23
+        targetSdkVersion 26
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:support-v4:26.+'
+    implementation files('libs/commons-io-2.4.jar')
+}

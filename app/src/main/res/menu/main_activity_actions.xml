@@ -1,0 +1,6 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/action_lamp_menu"
+          android:icon="@drawable/ic_action_light_bulb"
+          android:showAsAction="ifRoom"
+          android:title="Connect to ION" />
+</menu>
